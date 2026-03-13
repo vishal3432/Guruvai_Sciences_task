@@ -36,6 +36,7 @@ The least recently used item is removed from the tail when capacity is exceeded.
 
 The scheduler processes a list of events represented as:
 (start_time, end_time)
+
 Adjacent events where the end time equals the next start time do not overlap.
 
 # 1. can_attend_all(events)
