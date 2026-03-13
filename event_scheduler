@@ -12,9 +12,9 @@ def min_rooms_required(events):
         return 0
     starts = sorted([e[0] for e in events])
     ends = sorted([e[1] for e in events])
-    start_ptr = 0
-    end_ptr = 0
-    rooms = 0
+    start_ptr = 0    # pointer for next meeting start
+    end_ptr = 0      # pointer for earliest meeting end
+    rooms = 0       # room currently using
     max_rooms = 0
     while start_ptr < len(events):
         if starts[start_ptr] < ends[end_ptr]:
